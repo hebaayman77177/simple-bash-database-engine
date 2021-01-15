@@ -1,0 +1,56 @@
+#!/bin/bash
+source state;
+tableldata=$dbloc/$currdb/$currtabel/$currtabel;
+tablelmeta=$dbloc/$currdb/$currtabel/_$currtabel;
+first=1;
+
+# columns[1]=5;
+
+#get the columns
+let i=0;
+columns=($(awk  '{if( i == 0 ){;i=i+1}else{print $0;i=i+1}}' $tablelmeta))
+
+#get the data
+
+for column in "${columns[@]}"
+do
+    echo "$column:";
+    read val;
+    #check the key not exist
+    if [[ $first == 1 ]]
+    then
+        first=0;
+        #check the data;
+        key=$val;
+        check=`grep "^$key," $tableldata`
+        if [[ $check != '' ]]
+        then
+            echo "the ${values[0]} key already exist";
+            exit;
+        fi
+    fi
+    values[$i]=$val;
+    i=$(($i+1));
+done
+# awk -F, '{print key;if( $1 == key ){print "false";}}' $tableldata
+# check=$(awk -F, '{if( $1 == key ){print "false";}}' $tableldata);
+
+#insert the data
+res='';
+first=1;
+for val in "${values[@]}"
+do
+    if [[ $first == 1 ]]
+    then
+        first=0;
+        res=$val;
+        continue;
+    fi
+    res=$res,$val
+done
+echo $res >> $tableldata;
+echo "data inserted";
+
+
+
+

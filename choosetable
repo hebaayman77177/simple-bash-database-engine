@@ -1,0 +1,18 @@
+#!/bin/bash
+source state;
+tablename=$1;
+if [[ $1 == '' ]]
+then
+    echo "no name entered";
+    exit;
+fi
+for dir in `ls -F $dbloc/$currdb | grep '/'`
+do
+    if [[ $dir == $tablename/ ]]
+    then
+        awk '{if($0 !~ "^currtabel*"){print $0}}' state > out.temp && mv out.temp state;
+        echo "currtabel=$tablename" >> state
+        exit;
+    fi
+done
+echo "database $dbname not exist";

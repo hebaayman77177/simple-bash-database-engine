@@ -1,0 +1,17 @@
+#!/bin/bash
+source state;
+dbname=$1;
+if [[ $1 == '' ]]
+then
+    echo "no name entered";
+    exit;
+fi
+for dir in `ls -F $dbloc | grep '/'`
+do
+    if [[ $dir == $dbname/ ]]
+    then
+        echo "the name already exist";
+        exit;
+    fi
+done
+mkdir ./$dbloc/$dbname;

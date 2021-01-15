@@ -1,0 +1,11 @@
+#!/bin/bash
+source state;
+tableldata=$dbloc/$currdb/$currtabel/$currtabel;
+key=$1;
+if [[ $1 == '' ]]
+then
+    echo "no key entered";
+    exit;
+fi
+
+grep "^$key," $tableldata

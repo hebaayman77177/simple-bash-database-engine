@@ -1,0 +1,19 @@
+<mxfile host="65bd71144e" modified="2021-01-09T22:31:51.655Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" version="13.10.0" etag="Tsu_WxjSKVj1bm7gJqBW" type="embed">
+    <diagram id="tdvKFbWSnXpPjXwD4QVo" name="Page-1">
+        <mxGraphModel dx="561" dy="331" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="8" value="&lt;h1&gt;setub&lt;/h1&gt;&lt;div&gt;-create folder for the engine&lt;/div&gt;&lt;div&gt;-databases are folders&lt;/div&gt;&lt;div&gt;-state file&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="48" y="14" width="190" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;h1&gt;databases&lt;/h1&gt;&lt;div&gt;-each database is folder&lt;/div&gt;&lt;div&gt;-list database -&amp;gt;show the folders&lt;/div&gt;&lt;div&gt;-create database -&amp;gt; create folder if not exist&lt;/div&gt;&lt;div&gt;- connect to database-&amp;gt;&lt;/div&gt;&lt;div&gt;make the current state database is the database&lt;/div&gt;&lt;div&gt;- drop database-&amp;gt; remove the folder&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="46" y="126" width="190" height="214" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;h1&gt;database&lt;/h1&gt;&lt;div&gt;-create table -&amp;gt; if the table name doesnt exist&amp;nbsp; create it&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-list tables -&amp;gt; get all the tables folders/files in the current database&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-drop table -&amp;gt; remove&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-insert into table-&amp;gt;&lt;/div&gt;&lt;div&gt;if the key not exist&lt;/div&gt;&lt;div&gt;append the data&amp;nbsp;&lt;/div&gt;&lt;div&gt;i prefer the data be :separated,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;select-&amp;gt;select the field that match the id;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;delete-&amp;gt; delete the filed that match the id&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="58" y="319" width="190" height="361" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

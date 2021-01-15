@@ -1,0 +1,34 @@
+#!/bin/bash
+source state;
+tablename=$1;
+
+first=1;
+for var in "$@"
+do
+    if [[ $first == 1 ]]
+    then
+        first=0;
+        tablename=$var;
+        #loop through the database to check if the tabel exist or not
+        for dir in `ls -F $dbloc/$currdb | grep '/'`
+        do
+            if [[ $dir == $tablename/ ]]
+            then
+                echo "the name already exist";
+                exit;
+            fi
+        done
+        mkdir ./$dbloc/$currdb/$tablename;
+        tabelfile=./$dbloc/$currdb/$tablename/$tablename;
+        tabelmetadatafile=./$dbloc/$currdb/$tablename/_$tablename;
+        touch $tabelfile;
+        touch $tabelmetadatafile;
+        echo "columns:" >> $tabelmetadatafile;
+        continue;
+    fi
+
+    #loop through the columns
+    echo "$var" >> $tabelmetadatafile;
+done
+
+

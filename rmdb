@@ -1,0 +1,15 @@
+#!/bin/bash
+
+source state;
+
+db=$1;
+
+if [[ $1 == '' ]]
+then 
+    echo "no database selected";
+    exit;
+fi;
+
+rm -r $dbloc/$db;
+
+
